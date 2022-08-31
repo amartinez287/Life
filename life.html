@@ -1,7 +1,7 @@
 <cavnas id = "life" width ="500" height="500"></cavnas>
 <script>
 
-m=document.getElementById("life").getContext('2d')
+m=document.getElementById("life").getContext('2d');
 
 draw=(x,y,c,s)=>{
 	m.fillstyle=c
@@ -19,7 +19,7 @@ random=()=>{
 
 create=(number,color)=>{
 	group=[]
-	for(Let  i=0; i < number; i++){
+	for(i=0; i < number; i++){
 		group.push(paritcle(random(), random(), color))
 		particles.push(group[i])
 	}
@@ -32,7 +32,7 @@ update=()=>{
 
 	m.clearRect(0,0,500,500)
 	draw(0,0,"black",500)
-	for(i=0, i<particles.length; i++){
+	for(i=0; i<particles.length; i++){
 		draw(particles[i].x, particles[i].y,
 			 particles[i].color, 5)
 	}
