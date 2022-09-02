@@ -1,8 +1,10 @@
 <cavnas id = "life" width ="500" height="500"></cavnas>
 <script>
 
+//type error with this line
 m=document.getElementById("life").getContext('2d');
 
+//function to draw a rectantgle of size s*s and color c at (x,y)
 draw=(x,y,c,s)=>{
 	m.fillstyle=c
 	m.fillrect(x, y, s, s)
