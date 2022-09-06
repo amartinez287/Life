@@ -9,16 +9,16 @@ draw=(x,y,c,s)=>{
 	m.fillstyle=c
 	m.fillrect(x, y, s, s)
 } 
-
+//create particle
 particles=[]
 particles=(x,y,c)=>{
 	return{"x":x, "y":y, "vx":0, "vy":0, "color":c}
 }
-
+//random number function
 random=()=>{
 	return Math.random()*400+50
 }
-
+//create a group of particles
 create=(number,color)=>{
 	group=[]
 	for(i=0; i < number; i++){
@@ -27,11 +27,10 @@ create=(number,color)=>{
 	}
 	return group
 }
-
+//create 200 yellow particles
 yellow = create(200,"yellow")
 
 update=()=>{
-
 	m.clearRect(0,0,500,500)
 	draw(0,0,"black",500)
 	for(i=0; i<particles.length; i++){
